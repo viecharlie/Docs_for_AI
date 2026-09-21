@@ -1,0 +1,37 @@
+# Commissioned Skills Directory
+
+## MCP & API Skills
+
+| # | Skill Name | Description | Source | Latest Revision | Sample Trigger Phrases |
+|---|-----------|-------------|--------|-----------------|----------------------|
+| 1 | **mcp-link-um** | Undermind MCP bridge — connects to the Undermind.ai MCP server via OAuth + JSON-RPC for deep literature searches, full-text PDF reading, paper retrieval, and cited research report generation. | Charles Ho (custom) | 2026-05 | "search the literature on X", "deep research on Y", "find papers about Z", "read this paper", "write a literature review" |
+| 2 | **mcp-link-consensus** | Consensus MCP bridge — connects to the Consensus MCP server via OAuth + JSON-RPC to search 220M+ peer-reviewed research papers, retrieve paper details, and generate cited research outputs. | Charles Ho (custom) | 2026-05 | "search the literature on X", "find papers about Y", "get cited evidence for Z", "research synthesis" |
+| 3 | **mcp-api-connector-builder** | Meta-skill for building hardened MCP/API connector skills — OAuth 2.1 PKCE flow, AES-256-GCM encrypted credential storage, stdin-based IPC, path jailing, output sanitization, exponential backoff, security assessment. | Charles Ho (custom) | 2026-05 | "connect to X API", "build an MCP bridge for Y", "create a connector for Z service", "make a skill to talk to W" |
+| 4 | **api-link-github_repo** | Upload and retrieve files (PDFs, images, documents) to/from GitHub repositories via the GitHub REST API. Default owner is viecharlie. | Charles Ho (custom) | 2026-09 | "upload to GitHub", "push files to repo", "store docs in GitHub", "get files from GitHub" |
+
+## Scientific Writing & Citation Skills
+
+| # | Skill Name | Description | Source | Latest Revision | Sample Trigger Phrases |
+|---|-----------|-------------|--------|-----------------|----------------------|
+| 5 | **scientific-writing** (aliased `sci-agent-writer`) | Scientific manuscript writing agent — deep research, verified citations, multi-pass drafting, LaTeX/PDF output. IMRAD structure, real-only citation policy, extensive figure generation, PDF formatting review, multi-version editing. | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) — `skils/scientific-writing` | 2026-05 | "write a paper on X", "draft a manuscript", "generate a scientific report", "write a literature review section" |
+| 6 | **Claud-Sci-Writer** (aliased `claude-scientific-writer`) | Scientific manuscript writing agent (Claude-based) — deep research, verified citations, multi-pass drafting, LaTeX/PDF output. IMRAD structure, real-only citation policy, extensive figure generation, PDF formatting review, multi-version editing. | [K-Dense-AI/claude-scientific-writer](https://github.com/K-Dense-AI/claude-scientific-writer) | 2026-05 | "write a paper on X", "draft a manuscript", "generate a scientific report", "write a literature review section" |
+| 7 | **citation-compiler** | Citation compilation and RIS bibliography generation — compiles verified citations during writing phase, stores salient cited details in RIS N2 field. | Charles Ho (custom) | 2026-05 | "compile citations", "generate bibliography", "build RIS file", "collect references for my paper" |
+| 8 | **citation-vetter** | Source credibility registry and evidence-level classifier for scientific citations. Maintains vetted knowledge bases, classifies sources by evidence quality (E1-E7), escalates weak sources to literature search. | Charles Ho (custom) | 2026-05 | "verify these citations", "check source credibility", "classify evidence quality", "audit references" |
+| 9 | **citation-enricher** | Post-finalization comprehensive citation enrichment — fills in all missing metadata (full author lists, abstracts, volume/issue/pages, DOI hyperlinks, funding info, author affiliations) for every reference. | Charles Ho (custom) | 2026-05 | "enrich citations", "fill in missing metadata", "complete reference details", "add DOIs and abstracts" |
+| 10 | **unified-scientific-accuracy-guard** | Systematically detects and eliminates knowledge blending, hallucination, and citation errors in scientific writing. Enforces source attribution, claim verification, and uncertainty labeling. | Charles Ho (custom) | 2026-05 | "check for hallucinations", "verify scientific accuracy", "audit claims in this draft", "detect knowledge blending" |
+| 11 | **unified-scientific-manuscript-writer** | Comprehensive scientific manuscript writing agent — deep research, verified citations, multi-pass drafting, LaTeX/PDF output. IMRAD structure, real-only citation policy, extensive figure generation, PDF formatting review, multi-version editing, project folder management. | Charles Ho (custom) | 2026-05 | "write a full manuscript", "draft a research paper", "generate a complete scientific article" |
+| 12 | **research-grants** | Research grant proposal writing for NSF, NIH, DOE, DARPA, and Taiwan NSTC. Agency-specific formatting, review criteria, budget preparation, broader impacts, significance statements, innovation narratives, compliance. | Charles Ho (custom) | 2026-05 | "write a grant proposal", "draft an NSF proposal", "prepare NIH application", "write broader impacts section" |
+| 13 | **automated-implementer** | Automated implementation of technical plans — parses plans, generates all required SKILL.md, scripts, and test files, executes validation stress tests, delivers verified runnable workflows. | Charles Ho (custom) | 2026-05 | "implement this plan", "automate this workflow", "generate scripts from the spec", "build and test this pipeline" |
+
+## Utility Skills
+
+| # | Skill Name | Description | Source | Latest Revision | Sample Trigger Phrases |
+|---|-----------|-------------|--------|-----------------|----------------------|
+| 14 | **skill-directory-auto-updater** | Automatically triggered when any skill is installed, revised, or removed. Reads the current installed skill list, compares against the directory, adds/updates/removes entries, and maintains consistent directory structure and formatting. | Charles Ho (custom) | 2026-09-18 | (auto-triggered — no user phrase needed) |
+| 15 | **pdf-figure-table-extractor-with-qc** | Extract figures and tables from PDFs with table-of-contents parsing, embedded image extraction, crop fallback, quality check (QC), and auto-repair. Successor to pdf-figure-extractor. | Charles Ho (custom) | 2026-09 | "extract figures from PDF","extract tables from PDF","PDF figure extraction","PDF table extraction with QC" |
+| 16 | **pdf-to-article-md** | Convert PDF to article.md with preserved text/paragraph and table formatting, extract all images labeled by figure number and caption, save as JPEG. Outputs article.md + images, uploadable to GitHub. | Charles Ho (custom) | 2026-09 | "convert PDF to article.md", "PDF to Markdown article", "extract PDF as article with figures" |
+| 17 | **install-skill-with-registration** | Wrapper for install_skill() that auto-registers the new skill in the commissioned-skills-directory.md on GitHub (viecharlie/Docs_for_AI/instructions/). Uses api-link-github_repo for GitHub operations. Works across any chat window/workspace. | Charles Ho (custom) | 2026-09-19 | "install skill X","register new skill","install and record skill" |
+
+---
+
+*Last updated: 2026-09-19*
